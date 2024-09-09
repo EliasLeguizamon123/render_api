@@ -36,3 +36,7 @@ async def get_repair_bay():
     </html>
     """
     return Response(content=html_content, media_type="text/html")
+
+@app.get("/")
+def home():
+    return {"message": "Welcome to the USS Enterprise!"}
